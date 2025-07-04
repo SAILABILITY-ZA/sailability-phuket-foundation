@@ -288,7 +288,7 @@
         /* Hero Section */
         .hero {
             background: linear-gradient(rgba(30, 58, 138, 0.4), rgba(59, 130, 246, 0.4)), 
-                        linear-gradient(to bottom, #87ceeb 0%, #4682b4 50%, #1e3a8a 100%);
+                        url('sv14-boats-racing.jpg');
             background-size: cover;
             background-position: center;
             height: 100vh;
@@ -442,43 +442,15 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--white);
-            font-size: 4rem;
-            position: relative;
             overflow: hidden;
-        }
-
-        .sailing-scene {
-            text-align: center;
             position: relative;
-            z-index: 2;
         }
 
-        .thai-landmarks {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            filter: brightness(0.8);
-        }
-
-        .boats {
-            font-size: 2rem;
-            margin: 1rem 0;
-            letter-spacing: 1rem;
-        }
-
-        .water-waves {
-            font-size: 1.5rem;
-            opacity: 0.7;
-            margin-top: 1rem;
-        }
-
-        .location-text {
-            font-size: 1rem;
-            font-weight: bold;
-            color: var(--white);
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-            margin-top: 1rem;
-            font-family: 'Segoe UI', sans-serif;
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
         }
 
         /* Organizations Section */
@@ -522,6 +494,22 @@
             margin-bottom: 1rem;
         }
 
+        /* Fleet Section Enhanced */
+        .fleet-section {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .fleet-section img {
+            max-width: 120px;
+            max-height: 80px;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
         /* QR Payment Section */
         .qr-payment {
             background: var(--thai-green);
@@ -541,18 +529,11 @@
             box-shadow: 0 8px 25px rgba(0,0,0,0.15);
         }
 
-        .qr-placeholder {
-            width: 200px;
-            height: 200px;
-            background: #e5e7eb;
-            border: 2px dashed #9ca3af;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1rem;
-            color: #6b7280;
+        .qr-code-container img {
+            max-width: 300px;
+            width: 100%;
+            height: auto;
             border-radius: 8px;
-            margin: 0 auto;
         }
 
         /* Programs Section */
@@ -585,6 +566,93 @@
         .program-card p {
             margin-bottom: 1.5rem;
             color: #64748b;
+        }
+
+        /* Photo Gallery Section */
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .photo-card {
+            background: var(--white);
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .photo-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .photo-card .content {
+            padding: 1.5rem;
+        }
+
+        .photo-card h4 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .photo-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Sponsors Section */
+        .sponsors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .sponsor-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            text-align: center;
+            border-top: 4px solid #1560BD;
+            transition: transform 0.3s ease;
+        }
+
+        .sponsor-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .sponsor-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            height: 100px;
+        }
+
+        .sponsor-logo img {
+            max-width: 120px;
+            max-height: 80px;
+            object-fit: contain;
+        }
+
+        .sponsor-card h4 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .sponsor-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
         }
 
         /* Get Involved Section */
@@ -849,22 +917,12 @@
                 padding: 0 1rem;
             }
 
-            .thai-landmarks {
-                font-size: 2.5rem;
-            }
-
-            .boats {
-                font-size: 1.5rem;
-                letter-spacing: 0.5rem;
-            }
-
             .qr-code-container {
                 margin: 1rem 0;
             }
 
-            .qr-placeholder {
-                width: 150px;
-                height: 150px;
+            .qr-code-container img {
+                max-width: 250px;
             }
         }
 
@@ -937,7 +995,7 @@
         <section id="home" class="hero" aria-labelledby="hero-heading">
             <div class="hero-content">
                 <h1 id="hero-heading">Sailing for Everyone</h1>
-                <p class="hero-description">Sailability Phuket Foundation operates 7 SV14 adaptive sailing boats at Royal Phuket Marina, providing financial assistance and creating opportunities for people of all abilities to experience the freedom of sailing in beautiful Thailand.</p>
+                <p class="hero-description">Sailability Phuket Foundation operates 7 S\V14 adaptive sailing boats at Royal Phuket Marina, providing financial assistance and creating opportunities for people of all abilities to experience the freedom of sailing in beautiful Thailand.</p>
                 <div class="cta-buttons" role="group" aria-label="Main action buttons">
                     <a href="#programs" class="btn" aria-describedby="programs-desc">
                         Explore Programs
@@ -964,23 +1022,22 @@
                         <div class="organizations">
                             <h3>Our Fleet & Partnership</h3>
                             
-                            <div class="fleet-section" style="background: var(--white); padding: 1.5rem; border-radius: 12px; margin-bottom: 1.5rem; border-left: 4px solid var(--secondary-blue);">
+                            <div class="fleet-section" style="border-left: 4px solid var(--secondary-blue);">
                                 <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
-                                    <div class="sv14-logo-placeholder" role="img" aria-label="SV14 logo" style="background: #f8f9fa; color: #666666; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: bold; font-size: 1.2rem; letter-spacing: 3px; min-width: 100px; text-align: center; border: 3px solid #e9ecef; position: relative; font-family: 'Arial', sans-serif;">
-                                        <span style="color: #666666; font-weight: bold;">S\V</span><span style="color: #dc3545; font-weight: bold; margin-left: 8px; font-size: 1.2em;">14</span>
+                                    <div class="sv14-logo">
+                                        <img src="sv14-logo.png" alt="S\V14 logo" style="max-width: 100px; height: auto;">
                                     </div>
                                     <div style="flex: 1; min-width: 200px;">
-                                        <h4 style="color: var(--primary-blue); margin-bottom: 0.5rem; font-size: 1.3rem;">7 SV14 Boats</h4>
-                                        <p style="margin: 0; color: var(--text-secondary);">Our fleet includes seven SV14 boats specifically designed for accessible sailing - the world's premier adaptive sailing dinghies. Learn more about these innovative vessels at <a href="https://www.sv14.org" target="_blank" rel="noopener noreferrer" style="color: var(--secondary-blue);">www.sv14.org</a></p>
+                                        <h4 style="color: var(--primary-blue); margin-bottom: 0.5rem; font-size: 1.3rem;">7 S\V14 Boats</h4>
+                                        <p style="margin: 0; color: var(--text-secondary);">Our fleet includes seven S\V14 boats specifically designed for accessible sailing - the world's premier adaptive sailing dinghies. Learn more about these innovative vessels at <a href="https://www.sv14.org" target="_blank" rel="noopener noreferrer" style="color: var(--secondary-blue);">www.sv14.org</a></p>
                                     </div>
                                 </div>
                             </div>
                             
-                            <div class="fleet-section" style="background: var(--white); padding: 1.5rem; border-radius: 12px; margin-bottom: 1.5rem; border-left: 4px solid var(--thai-green);">
+                            <div class="fleet-section" style="border-left: 4px solid var(--thai-green);">
                                 <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
-                                    <div class="gemini-logo-placeholder" style="background: #1a1a1a; color: #ff6b35; padding: 1rem; border-radius: 8px; font-weight: bold; font-size: 1.2rem; text-align: center; min-width: 120px; position: relative; font-family: 'Arial Black', Arial, sans-serif; border: 2px solid #ff6b35;">
-                                        <div style="color: #ff6b35; font-size: 1.4rem; font-weight: 900; letter-spacing: 1px;">Gemini</div>
-                                        <div style="color: #1a1a1a; background: #ff6b35; font-size: 0.8rem; padding: 2px 4px; margin-top: 2px; border-radius: 3px;">marine</div>
+                                    <div class="gemini-logo">
+                                        <img src="gemini-marine-logo.jpg" alt="Gemini Marine logo" style="max-width: 120px; height: auto;">
                                     </div>
                                     <div style="flex: 1; min-width: 200px;">
                                         <h4 style="color: var(--primary-blue); margin-bottom: 0.5rem; font-size: 1.3rem;">Gemini 505 Rescue RIB</h4>
@@ -1011,7 +1068,7 @@
                                     📱 Follow us on Facebook
                                 </a>
                                 <a href="https://www.sv14.org" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; gap: 0.5rem; color: var(--secondary-blue); text-decoration: none; font-weight: bold;">
-                                    🌐 Learn about SV14 boats
+                                    🌐 Learn about S\V14 boats
                                 </a>
                                 <a href="https://www.gemini-marine.com" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; gap: 0.5rem; color: var(--secondary-blue); text-decoration: none; font-weight: bold;">
                                     🚤 Gemini Marine
@@ -1019,13 +1076,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="about-image" role="img" aria-label="Illustration showing sailing boats on water with Thai islands in background representing Phuket sailing">
-                        <div class="sailing-scene">
-                            <div class="thai-landmarks">🏝️🛕</div>
-                            <div class="boats">⛵ ⛵ ⛵</div>
-                            <div class="water-waves">🌊</div>
-                            <div class="location-text">Phuket, Thailand</div>
-                        </div>
+                    <div class="about-image" role="img" aria-label="Royal ceremony photo showing award presentation with wheelchair accessibility">
+                        <img src="royal-ceremony-1.jpeg" alt="Royal ceremony award presentation showing inclusive sailing achievements">
                     </div>
                 </div>
             </div>
@@ -1068,7 +1120,7 @@
                     
                     <article class="program-card" role="listitem">
                         <h3>Professional Fleet</h3>
-                        <p>Our impressive fleet includes 7 SV14 adaptive sailing boats - the world's premier accessible dinghies - plus a Gemini 505 Rescue RIB for safety support during all activities.</p>
+                        <p>Our impressive fleet includes 7 S\V14 adaptive sailing boats - the world's premier accessible dinghies - plus a Gemini 505 Rescue RIB for safety support during all activities.</p>
                         <a href="#contact" class="btn" aria-label="Learn more about our sailing fleet">Learn More</a>
                     </article>
                 </div>
@@ -1082,13 +1134,7 @@
                 <p style="font-size: 1.2rem; margin-bottom: 2rem;">Your donation helps provide financial assistance to sailors with disabilities and supports our adaptive sailing programs.</p>
                 
                 <div class="qr-code-container">
-                    <div class="qr-placeholder">
-                        <div style="text-align: center;">
-                            <div style="font-size: 3rem; margin-bottom: 1rem;">📱</div>
-                            <div>QR Code for<br>Thai Bank Payments</div>
-                            <div style="font-size: 0.9rem; margin-top: 0.5rem; color: #9ca3af;">Upload your QR code image here</div>
-                        </div>
-                    </div>
+                    <img src="donation-qr-code.jpg" alt="Thai QR Payment code for Sailability Phuket Foundation donations">
                     <p style="color: #1e3a8a; font-weight: bold; margin-top: 1rem;">Sailability Phuket Foundation</p>
                     <p style="color: #6b7280; font-size: 0.9rem;">Scan to donate via Thai banking apps</p>
                 </div>
@@ -1113,65 +1159,41 @@
                     Celebrating our sailors' achievements and the recognition from Thai authorities for advancing adaptive sailing
                 </p>
                 
-                <div class="photo-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div class="photo-grid">
                     
-                    <!-- Gold Medal Royal Ceremony -->
-                    <div class="photo-card" style="background: var(--white); border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); overflow: hidden; border-top: 4px solid #FFD700;">
-                        <div class="photo-placeholder" style="height: 250px; background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; position: relative;">
-                            <div style="text-align: center;">
-                                <div style="font-size: 4rem; margin-bottom: 1rem;">🥇</div>
-                                <div style="font-size: 1.3rem; font-weight: bold;">GOLD MEDAL</div>
-                                <div style="font-size: 1rem; opacity: 0.9;">Royal Ceremony</div>
-                            </div>
-                        </div>
-                        <div style="padding: 1.5rem;">
-                            <h4 style="color: var(--primary-blue); margin-bottom: 1rem; font-size: 1.3rem;">🏆 Gold Medal Winner</h4>
-                            <p style="color: var(--text-secondary); font-size: 0.95rem;">Our gold medalist receiving the highest honor in a formal Thai royal ceremony, representing excellence in adaptive sailing and inspiring the disability community.</p>
+                    <!-- Royal Ceremony Photo 1 -->
+                    <div class="photo-card" style="border-top: 4px solid #FFD700;">
+                        <img src="royal-ceremony-1.jpeg" alt="Royal ceremony medal presentation with wheelchair accessibility and Thai officials">
+                        <div class="content">
+                            <h4>🏆 Royal Ceremony Recognition</h4>
+                            <p>Medal winner receiving the highest honor in a formal Thai royal ceremony, representing excellence in adaptive sailing and inspiring the disability community.</p>
                         </div>
                     </div>
 
-                    <!-- Silver Medal Royal Ceremony -->
-                    <div class="photo-card" style="background: var(--white); border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); overflow: hidden; border-top: 4px solid #C0C0C0;">
-                        <div class="photo-placeholder" style="height: 250px; background: linear-gradient(135deg, #C0C0C0 0%, #A8A8A8 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; position: relative;">
-                            <div style="text-align: center;">
-                                <div style="font-size: 4rem; margin-bottom: 1rem;">🥈</div>
-                                <div style="font-size: 1.3rem; font-weight: bold;">SILVER MEDAL</div>
-                                <div style="font-size: 1rem; opacity: 0.9;">Royal Ceremony</div>
-                            </div>
-                        </div>
-                        <div style="padding: 1.5rem;">
-                            <h4 style="color: var(--primary-blue); margin-bottom: 1rem; font-size: 1.3rem;">🥈 Silver Medal Winner</h4>
-                            <p style="color: var(--text-secondary); font-size: 0.95rem;">Silver medal achievement honored in the prestigious royal ceremony, demonstrating exceptional skill and dedication in adaptive sailing competition.</p>
+                    <!-- Royal Ceremony Photo 2 -->
+                    <div class="photo-card" style="border-top: 4px solid #C0C0C0;">
+                        <img src="royal-ceremony-2.jpeg" alt="Royal award ceremony showing trophy presentation to sailing athlete">
+                        <div class="content">
+                            <h4>🥈 Royal Award Ceremony</h4>
+                            <p>Award presentation at the prestigious royal ceremony, demonstrating exceptional skill and dedication in adaptive sailing competition representing Thailand.</p>
                         </div>
                     </div>
 
-                    <!-- Bronze Medal Royal Ceremony -->
-                    <div class="photo-card" style="background: var(--white); border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); overflow: hidden; border-top: 4px solid #CD7F32;">
-                        <div class="photo-placeholder" style="height: 250px; background: linear-gradient(135deg, #CD7F32 0%, #B8860B 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; position: relative;">
-                            <div style="text-align: center;">
-                                <div style="font-size: 4rem; margin-bottom: 1rem;">🥉</div>
-                                <div style="font-size: 1.3rem; font-weight: bold;">BRONZE MEDAL</div>
-                                <div style="font-size: 1rem; opacity: 0.9;">Royal Ceremony</div>
-                            </div>
-                        </div>
-                        <div style="padding: 1.5rem;">
-                            <h4 style="color: var(--primary-blue); margin-bottom: 1rem; font-size: 1.3rem;">🥉 Bronze Medal Winner</h4>
-                            <p style="color: var(--text-secondary); font-size: 0.95rem;">Bronze medal recognition in the royal ceremony, celebrating outstanding performance and representing the growth of adaptive sailing in Thailand.</p>
+                    <!-- Royal Ceremony Photo 3 -->
+                    <div class="photo-card" style="border-top: 4px solid #CD7F32;">
+                        <img src="royal-ceremony-3.jpeg" alt="Royal ceremony with medal presentation and Thai officials honoring adaptive sailing achievements">
+                        <div class="content">
+                            <h4>🥉 Royal Recognition Achievement</h4>
+                            <p>Medal recognition in the royal ceremony, celebrating outstanding performance and representing the growth of adaptive sailing in Thailand.</p>
                         </div>
                     </div>
 
-                    <!-- Phuket King's Cup Regatta -->
-                    <div class="photo-card" style="background: var(--white); border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); overflow: hidden;">
-                        <div class="photo-placeholder" style="height: 250px; background: linear-gradient(135deg, #1560BD 0%, #2E5AAA 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; position: relative;">
-                            <div style="text-align: center;">
-                                <div style="font-size: 4rem; margin-bottom: 1rem;">🏆</div>
-                                <div style="font-size: 1.2rem; font-weight: bold;">1st Inclusive Sailing SV14</div>
-                                <div style="font-size: 1rem; opacity: 0.9;">Phuket King's Cup Regatta</div>
-                            </div>
-                        </div>
-                        <div style="padding: 1.5rem;">
-                            <h4 style="color: var(--primary-blue); margin-bottom: 1rem; font-size: 1.3rem;">Historic Achievement</h4>
-                            <p style="color: var(--text-secondary); font-size: 0.95rem;">Making history as the first inclusive sailing SV14 event at the prestigious Phuket King's Cup Regatta, bringing together sailors of all abilities in competition.</p>
+                    <!-- King's Cup Regatta Team Photo -->
+                    <div class="photo-card">
+                        <img src="kings-cup-regatta-team-photo.jpg" alt="Team photo at Phuket King's Cup Regatta showing first inclusive S\V14 sailing event participants with trophies">
+                        <div class="content">
+                            <h4>Historic King's Cup Achievement</h4>
+                            <p>Making history as the first inclusive sailing S\V14 event at the prestigious Phuket King's Cup Regatta, bringing together sailors of all abilities in competition.</p>
                         </div>
                     </div>
                 </div>
@@ -1205,6 +1227,8 @@
                 </div>
             </div>
         </section>
+
+        <!-- Sponsors Section -->
         <section id="sponsors" class="sponsors" style="background: var(--bg-light); padding: 4rem 2rem;">
             <div class="section-container">
                 <h2 class="section-title" style="color: var(--primary-blue);">Our Sponsors & Partners</h2>
@@ -1212,47 +1236,33 @@
                     We are grateful for the support of these outstanding organizations that help make adaptive sailing accessible in Phuket
                 </p>
                 
-                <div class="sponsors-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+                <div class="sponsors-grid">
                     
                     <!-- Rotary Club Patong Beach -->
-                    <div class="sponsor-card" style="background: var(--white); padding: 2rem; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); text-align: center; border-top: 4px solid #1560BD;">
-                        <div class="rotary-logo-placeholder" style="display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
-                            <div style="background: #1560BD; color: var(--white); padding: 1rem; border-radius: 8px; font-weight: bold; font-size: 1.1rem; text-align: center; min-width: 120px; position: relative;">
-                                <div style="color: #F7931E; font-size: 1.8rem; margin-bottom: 0.5rem;">⚙️</div>
-                                <div style="color: var(--white); font-size: 1.2rem; font-weight: 900;">Rotary</div>
-                                <div style="color: #F7931E; font-size: 0.9rem; margin-top: 0.25rem;">INTERNATIONAL</div>
-                            </div>
+                    <div class="sponsor-card">
+                        <div class="sponsor-logo">
+                            <img src="rotary-club-patong-beach-logo.jpg" alt="Rotary Club Patong Beach logo">
                         </div>
-                        <h4 style="color: var(--primary-blue); margin-bottom: 1rem; font-size: 1.3rem;">Rotary Club Patong Beach</h4>
-                        <p style="color: var(--text-secondary); font-size: 0.95rem;">Supporting community service and humanitarian efforts, Rotary Club Patong Beach helps fund adaptive sailing programs for people with disabilities.</p>
+                        <h4>Rotary Club Patong Beach</h4>
+                        <p>Supporting community service and humanitarian efforts, Rotary Club Patong Beach helps fund adaptive sailing programs for people with disabilities.</p>
                     </div>
 
                     <!-- Masonic Lodge Light of Siam -->
-                    <div class="sponsor-card" style="background: var(--white); padding: 2rem; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); text-align: center; border-top: 4px solid #1560BD;">
-                        <div class="masonic-logo-placeholder" style="display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
-                            <div style="background: radial-gradient(circle, #1560BD 0%, #2E5AAA 100%); color: #F7931E; padding: 1.5rem; border-radius: 50%; font-weight: bold; font-size: 1.1rem; text-align: center; width: 100px; height: 100px; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; border: 3px solid #F7931E;">
-                                <div style="color: #F7931E; font-size: 1.5rem; margin-bottom: 0.25rem;">☀️</div>
-                                <div style="color: var(--white); font-size: 0.7rem; font-weight: 900; letter-spacing: 1px;">LIGHT OF</div>
-                                <div style="color: #F7931E; font-size: 0.8rem; font-weight: 900;">SIAM</div>
-                                <div style="color: var(--white); font-size: 0.6rem; margin-top: 0.25rem;">9791</div>
-                            </div>
+                    <div class="sponsor-card">
+                        <div class="sponsor-logo">
+                            <img src="light-of-siam-lodge-logo.jpeg" alt="Masonic Lodge Light of Siam 9791 logo">
                         </div>
-                        <h4 style="color: var(--primary-blue); margin-bottom: 1rem; font-size: 1.3rem;">Masonic Lodge Light of Siam</h4>
-                        <p style="color: var(--text-secondary); font-size: 0.95rem;">Established 9791, supporting charitable causes and community development. Committed to helping provide equal opportunities for all people to experience sailing.</p>
+                        <h4>Masonic Lodge Light of Siam</h4>
+                        <p>Established 9791, supporting charitable causes and community development. Committed to helping provide equal opportunities for all people to experience sailing.</p>
                     </div>
 
                     <!-- Royal Phuket Marina -->
-                    <div class="sponsor-card" style="background: var(--white); padding: 2rem; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); text-align: center; border-top: 4px solid #1560BD;">
-                        <div class="rpm-logo-placeholder" style="display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
-                            <div style="background: linear-gradient(135deg, #1560BD 0%, #2E5AAA 100%); color: var(--white); padding: 1.5rem; border-radius: 8px; font-weight: bold; font-size: 1rem; text-align: center; min-width: 140px; position: relative;">
-                                <div style="color: #F7931E; font-size: 2rem; margin-bottom: 0.5rem;">🏰</div>
-                                <div style="color: var(--white); font-size: 1.1rem; font-weight: 900; letter-spacing: 1px;">ROYAL</div>
-                                <div style="color: #F7931E; font-size: 1.1rem; font-weight: 900; letter-spacing: 1px;">PHUKET</div>
-                                <div style="color: var(--white); font-size: 1.1rem; font-weight: 900; letter-spacing: 1px;">MARINA</div>
-                            </div>
+                    <div class="sponsor-card">
+                        <div class="sponsor-logo">
+                            <img src="royal-phuket-marina-logo.jpg" alt="Royal Phuket Marina logo">
                         </div>
-                        <h4 style="color: var(--primary-blue); margin-bottom: 1rem; font-size: 1.3rem;">Royal Phuket Marina</h4>
-                        <p style="color: var(--text-secondary); font-size: 0.95rem;">Our home base and proud supporter, providing world-class marina facilities and professional support for all adaptive sailing activities.</p>
+                        <h4>Royal Phuket Marina</h4>
+                        <p>Our home base and proud supporter, providing world-class marina facilities and professional support for all adaptive sailing activities.</p>
                     </div>
                 </div>
 
@@ -1267,6 +1277,8 @@
                 </div>
             </div>
         </section>
+
+        <!-- Get Involved Section -->
         <section id="get-involved" class="get-involved" aria-labelledby="get-involved-heading">
             <div class="section-container">
                 <h2 id="get-involved-heading" class="section-title">Get Involved</h2>
